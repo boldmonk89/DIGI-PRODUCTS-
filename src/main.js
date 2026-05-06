@@ -11,12 +11,12 @@ faqItems.forEach(item => {
 // Vault Carousel Population
 const vaultTrack = document.querySelector('.carousel-track');
 const vaultData = [
-  { title: "Viral Hook Formula", category: "Framework" },
-  { title: "High-Ticket Closing", category: "Sales" },
-  { title: "Passive Income Setup", category: "Strategy" },
-  { title: "Email Marketing Secrets", category: "Marketing" },
-  { title: "Thumbnail Masterclass", category: "Design" },
-  { title: "Script Writing 101", category: "Content" },
+  { title: "10,000+ Viral Reels", category: "REELS" },
+  { title: "1,000+ Master Ebooks", category: "EBOOKS" },
+  { title: "Ultimate Templates", category: "TEMPLATES" },
+  { title: "Kids Drawing Masterclass", category: "KIDS" },
+  { title: "Content Creation Mastery", category: "STRATEGY" },
+  { title: "Passive Income Blueprint", category: "MARKETING" },
 ];
 
 if (vaultTrack) {

@@ -66,6 +66,16 @@ body {
   text-align: center;
 }
 
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+.site-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
 .badge {
   display: inline-block;
   background: var(--text-dark);
