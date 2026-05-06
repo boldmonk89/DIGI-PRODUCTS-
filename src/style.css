@@ -165,6 +165,69 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* Scrolling Ticker */
+.scrolling-ticker {
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.ticker-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.ticker-chip {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Stats Card */
+.stats-card {
+  margin: 3rem auto 0;
+  max-width: 800px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-orange);
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
 .icon-circle {
   width: 24px;
   height: 24px;
@@ -177,23 +240,6 @@ body {
 
 .icon-circle svg { width: 14px; height: 14px; }
 .w-full { width: 100%; justify-content: center; }
-
-/* Stats Bar */
-.stats-bar {
-  background: white;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  padding: 1.5rem 0;
-  overflow: hidden;
-}
-
-.ticker-content {
-  display: flex;
-  justify-content: space-around;
-  font-weight: 700;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
 
 /* Comparison Section */
 .comparison { padding: 6rem 0; }
