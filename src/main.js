@@ -20,30 +20,8 @@ document.querySelectorAll('.faq-question').forEach(button => {
   });
 });
 
-// Struggles Checkboxes Logic
-document.querySelectorAll('.struggle-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const isChecked = item.getAttribute('data-checked') === 'true';
-    item.setAttribute('data-checked', !isChecked);
-    
-    const checkbox = item.querySelector('.checkbox');
-    if (!isChecked) {
-      checkbox.innerHTML = '✓';
-      checkbox.style.background = 'var(--primary-orange)';
-      checkbox.style.color = 'white';
-      checkbox.style.display = 'flex';
-      checkbox.style.alignItems = 'center';
-      checkbox.style.justifyContent = 'center';
-      checkbox.style.fontWeight = 'bold';
-    } else {
-      checkbox.innerHTML = '';
-      checkbox.style.background = '#eee';
-    }
-  });
-});
-
 // Vault Preview Carousel Population
-const vaultTrack = document.querySelector('.vault-preview .carousel-track');
+const vaultTrack = document.querySelector('.products-carousel-section .carousel-track');
 const productData = [
   { name: "2500+ Cars Reel Bundle", price: "₹ 499", img: "prod1.png" },
   { name: "AI Prompts Mastery", price: "₹ 299", img: "prod2.png" },
@@ -60,7 +38,9 @@ const productData = [
 ];
 
 if (vaultTrack) {
-  productData.forEach(prod => {
+  // Duplicate products for seamless loop
+  const allProducts = [...productData, ...productData];
+  allProducts.forEach(prod => {
     const card = document.createElement('div');
     card.className = 'vault-card';
     card.innerHTML = `
