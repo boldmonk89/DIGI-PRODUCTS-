@@ -1,5 +1,8 @@
 import './style.css';
 
+// Base path helper for GitHub Pages
+const basePath = window.location.pathname.includes('DIGI-PRODUCTS-') ? '/DIGI-PRODUCTS-/' : '/';
+
 // FAQ Accordion Interaction
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
@@ -62,7 +65,7 @@ if (vaultTrack) {
     card.className = 'vault-card';
     card.innerHTML = `
       <div class="card-image">
-        <img src="./products/${prod.img}" alt="${prod.name}">
+        <img src="${basePath}products/${prod.img}" alt="${prod.name}">
       </div>
       <div class="card-info">
         <h3>${prod.name}</h3>
