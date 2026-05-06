@@ -62,7 +62,7 @@ if (vaultTrack) {
     card.className = 'vault-card';
     card.innerHTML = `
       <div class="card-image">
-        <img src="/src/assets/products/${prod.img}" alt="${prod.name}">
+        <img src="products/${prod.img}" alt="${prod.name}">
       </div>
       <div class="card-info">
         <h3>${prod.name}</h3>
