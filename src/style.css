@@ -20,18 +20,20 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background-color: var(--bg-dark);
   color: var(--text-white);
   font-family: var(--sf-font);
   line-height: 1.5;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 .text-orange { color: var(--primary-orange); }
