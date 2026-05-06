@@ -1,3 +1,5 @@
+import './style.css';
+
 // FAQ Accordion Interaction
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
